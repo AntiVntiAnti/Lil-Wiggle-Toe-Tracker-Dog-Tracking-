@@ -586,6 +586,10 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
             self.settings.setValue('lily_energy', self.lily_energy.value())
         except Exception as e:
             logger.error(f'{e}', exc_info=True)
+        try:
+            self.settings.setValue('lily_notes', self.lily_notes.toHtml())
+        except Exception as e:
+            logger.error(f'{e}', exc_info=True)
             # save window geometry state
         try:
             self.settings.setValue("geometry", self.saveGeometry())
@@ -636,6 +640,10 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
             logger.error(f'{e}', exc_info=True)
         try:
             self.lily_energy.setValue(self.settings.value('lily_energy', 0, type=int))
+        except Exception as e:
+            logger.error(f'{e}', exc_info=True)
+        try:
+            self.lily_notes.setHtml(self.settings.value('lily_notes', "", type=str))
         except Exception as e:
             logger.error(f'{e}', exc_info=True)
         try:
