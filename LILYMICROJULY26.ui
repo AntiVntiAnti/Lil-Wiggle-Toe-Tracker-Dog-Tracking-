@@ -1,0 +1,2229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>237</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font: 11pt &quot;Poppins&quot;;
+    background:#121212;
+    color:rgb(255,255,255);
+}
+
+QTextEdit {
+    border:none;
+	font-size: 11pt;
+}
+
+/* ///////////////////////////////////////////////////////////////
+QToolTip
+/////////////////////////////////////////////////////////////// */
+QToolTip {
+    background: rgba(23,23,23, 150);
+    border: 1px solid rgb(205,178,214);
+    border-radius: 10px;
+    padding:8px;
+    text-align: left;
+    font:10pt &quot;Helvetica&quot;;
+    font-weight:800;
+    color: rgb(205,178,214);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+QTimeEdit, QDoubleSpinBox, QSpinBox
+///////////////////////////////////////////////////////////////////////////// */
+QDoubleSpinBox,
+QSpinBox {
+    border:none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+QLabel
+///////////////////////////////////////////////////////////////////////////// */
+QLabel {
+    background:transparent;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+QComboBox
+///////////////////////////////////////////////////////////////////////////// */
+QComboBox {
+    background-color: transparent; border:1px inset rgb(28,32,23); border-radius:2px; padding: 3px;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////
+QLineEdit
+///////////////////////////////////////////////////////////////////////////// */
+    QLineEdit {
+    border:none;
+    background: transparent;
+}
+QLineEdit:hover {
+    border-bottom:1px solid rgba(123, 123, 123, 150);
+}
+QLineEdit:focus {
+    border-bottom:1px solid rgba(123, 123, 123, 200);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+QCheckBox
+///////////////////////////////////////////////////////////////////////////// */
+QCheckBox::indicator {
+    font-weight:bold;
+    background-color: transparent;
+    border: 2px solid rgb(33,143,109);
+    border-radius: 6px;
+    width: 8px;
+    height: 8px;
+    margin-left:8px;
+    margin-right:8px;
+}
+QCheckBox::indicator:hover {
+    border: 2px solid white;
+}
+QCheckBox::indicator:checked {
+    background: rgb(33,143,109);
+    border: 2px solid rgb(33,143,109);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+QSlider
+///////////////////////////////////////////////////////////////////////////// */
+QSlider:horizontal {
+    background:transparent;
+}
+QSlider::groove:horizontal {
+    border-radius: 5px;
+    height: 10px;
+    margin: 0px;
+    background:rgb(22, 22, 22);
+    }
+
+QSlider::groove:horizontal:hover {
+    background: rgb(38, 38, 38);
+}
+QSlider::handle:horizontal {
+    background: rgb(255, 255, 255);
+    height: 10px;
+    width: 10px;
+    margin: 0px;
+    border-radius:5px;
+}
+QSlider::sub-page:horizontal {
+    background:transparent;
+}
+QSlider::handle:horizontal:hover {
+    background-color: white;
+}
+QSlider::handle:horizontal:pressed {
+    background-color:white;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+Time/DateEdit
+///////////////////////////////////////////////////////////////////////////// */
+QTimeEdit,
+QDateEdit {
+    background-color: transparent;
+    border:None;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////
+QTableView
+////////////////////////////////////////////////////////////////////////////// */
+QTableView {
+    background-color: transparent;
+    alternate-background-color: rgb(101, 147, 128);
+    selection-background-color: #7e57c2;
+    gridline-color: rgb(90, 90, 90);color:rgb(245,245,245);
+}
+
+QTableView::item {
+    padding: 1px;
+    background:rgb(216,79,79);
+}
+QTableView::item:selected {
+    color: #fff;
+    background:rgb(23, 23, 23);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+#lily_mood_entry_date, #lily_diet_date, #lily_walk_date
+///////////////////////////////////////////////////////////////////////////// */
+#lily_diet_delete_btn,
+#lily_mood_delete_btn,
+#lily_walk_delete_btn {
+    border:none;
+    image: url(:/icons/UpdatedIcons/lily_d_norm.png);
+    max-width:20px;
+    min-width:20px;
+    max-height:20px;
+    min-height:20px;
+}
+#lily_diet_delete_btn:hover,
+#lily_mood_delete_btn:hover,
+#lily_walk_delete_btn:hover {
+    image: url(:/icons/UpdatedIcons/lily_c_hover.png);
+}
+#lily_diet_delete_btn:pressed,
+#lily_mood_delete_btn:pressed,
+#lily_walk_delete_btn:pressed {
+    image: url(:/icons/UpdatedIcons/lily_d_press.png);
+}
+
+#lily_mood_entry_date,
+#lily_diet_date,
+#lily_walk_date {
+    color:rgb(200,170,200);
+}
+
+#lily_mood_entry_date:focus,
+#lily_diet_date:focus,
+#lily_walk_date:focus {
+    color:#fff;
+}
+
+/* ------------------------------------------------- 
+    Data // TableView nav btn frame
+-------------------------------------------------  */
+#lilys_data_nav_btn_frame &gt; QPushButton {
+    border-radius:3px;
+    padding:2px 4px;
+    border:none;
+    color:#fff;
+    min-width:35px;
+    max-width:35px;
+    min-height:35px;
+    max-height:35px;
+    background:transparent;
+}
+
+#lilys_data_nav_btn_frame &gt; QPushButton:hover {
+    color:#fff;
+    font-size:11pt;
+    margin-top:2px;
+    margin-left:2px;
+    background:transparent;
+    /*background-color:rgb(255,255,255); */
+}
+
+#lilys_data_nav_btn_frame &gt; QPushButton:checked {
+    font-weight:bold;
+    margin:0px;
+     background:transparent;
+    color:#fff;
+}
+
+#lilys_data_nav_btn_frame &gt; QPushButton:pressed {
+    background:transparent;
+    font-weight:bold;
+    font-size:12pt;
+    margin:0px;
+    color:#fff;
+}
+
+#lilys_data_nav_btn_frame &gt; QPushButton:checked:hover {
+    font-weight:bold;
+    margin:0px;
+    color:#fff;
+    background:transparent;
+}
+
+#lilys_data_nav_btn_frame &gt; QPushButton:checked:pressed {
+background:transparent;
+    font-weight:bold;
+    margin:0px;
+    color:#fff;
+}
+
+#lily_walk_btn,
+#lily_walk_btn_2,
+#lily_walk_btn_3 {
+	border:none;
+	max-width:35px;
+	min-width:35px;
+	max-height:35px;
+	min-height:35px;
+	image: url(:/icons/UpdatedIcons/lily_w_norm.png);
+}
+
+#lily_walk_btn:hover,
+#lily_walk_btn_2:hover,
+#lily_walk_btn_3:hover {
+    image: url(:/icons/UpdatedIcons/lily_w_hover.png);
+}
+
+#lily_walk_btn:pressed,
+#lily_walk_btn_2:pressed,
+#lily_walk_btn_3:pressed {
+    image: url(:/icons/UpdatedIcons/lily_w_press.png);
+}
+
+#lily_ate_check_2,
+#lily_ate_check {
+    border:none;
+    image: url(:/icons/UpdatedIcons/lily_e_norm.png);
+	max-width:40px;
+	min-width:40px;
+	max-height:40px;
+	min-height:40px;
+}
+
+#lily_ate_check_2:hover,
+#lily_ate_check:hover {
+    image: url(:/icons/UpdatedIcons/lily_e_hover.png);
+}
+
+#lily_ate_check_2:pressed,
+#lily_ate_check:pressed {
+    image: url(:/icons/UpdatedIcons/lily_e_press.png);
+}
+
+#lily_ate_check_2:checked,
+#lily_ate_check:checked {
+    image: url(:/icons/UpdatedIcons/lilybowlchecked.png);
+}
+
+#lily_walk_btn:checked:hover,
+#lily_walk_btn_2:checked:hover,
+#lily_walk_btn_3:checked:hover {
+    image: url(:/icons/UpdatedIcons/lily_paw_hovered.png);
+}
+
+#lily_walk_btn:checked:pressed,
+#lily_walk_btn_2:checked:pressed,
+#lily_walk_btn_3:checked:pressed {
+    image: url(:/icons/UpdatedIcons/lily_paw_pressed.png);
+}
+
+
+#lily_walk_btn:checked,
+#lily_walk_btn_2:checked,
+#lily_walk_btn_3:checked {
+    image: url(:/icons/UpdatedIcons/lilychecked.png);
+}
+
+#lily_behavior_3,
+#lily_behavior_2,
+#lily_behavior {
+    color:rgb(205,178,214);
+}
+
+#lily_behavior_3:hover,
+#lily_behavior_2:hover,
+#lily_behavior:hover {
+    color: rgb(225,198,234);
+}
+
+#lily_behavior_3:focus,
+#lily_behavior_2:focus,
+#lily_behavior:focus {
+    color: rgb(245,218,254);
+}
+
+#lily_behavior_slider_3::handle:horizontal,
+#lily_behavior_slider_2::handle:horizontal,
+#lily_behavior_slider::handle:horizontal {
+    background:rgb(160,130,160);
+}
+#lily_behavior_slider_3::handle:horizontal:hover,
+#lily_behavior_slider_2::handle:horizontal:hover,
+#lily_behavior_slider::handle:horizontal:hover {
+    background:rgb(190,160,190);
+}
+#lily_behavior_slider_3::handle:horizontal:pressed,
+#lily_behavior_slider_2::handle:horizontal:pressed,
+#lily_behavior_slider::handle:horizontal:pressed {
+    background:rgb(140,110,140);
+}
+#lily_behavior_slider_3::sub-page:horizontal,
+#lily_behavior_slider_2::sub-page:horizontal,
+#lily_behavior_slider::sub-page:horizontal {
+    background:rgb(160,130,160);
+}
+#lily_behavior_slider_3::groove:horizontal:hover,
+#lily_behavior_slider_2::groove:horizontal:hover,
+#lily_behavior_slider::groove:horizontal:hover {
+    background:rgba(160,130,160,45);
+}
+
+#lily_gait,
+#lily_gait_2,
+#lily_gait_3 {
+    color:rgb(100,70,100);
+}
+#lily_gait:hover,
+#lily_gait_2:hover,
+#lily_gait_3:hover {
+    color: rgb(120,90,120);
+}
+#lily_gait:focus,
+#lily_gait_2:focus,
+#lily_gait_3:focus {
+    color: rgb(140,110,140);
+}
+
+#lily_gait_slider::handle:horizontal,
+#lily_gait_slider_2::handle:horizontal,
+#lily_gait_slider_3::handle:horizontal {
+    background:rgb(100,70,100);
+}
+
+#lily_gait_slider::handle:horizontal:hover,
+#lily_gait_slider_2::handle:horizontal:hover,
+#lily_gait_slider_3::handle:horizontal:hover {
+    background:rgb(130,100,130);
+}
+
+#lily_gait_slider::handle:horizontal:pressed,
+#lily_gait_slider_2::handle:horizontal:pressed,
+#lily_gait_slider_3::handle:horizontal:pressed {
+    background:rgb(80,50,80);
+}
+
+#lily_gait_slider::sub-page:horizontal,
+#lily_gait_slider_2::sub-page:horizontal,
+#lily_gait_slider_3::sub-page:horizontal {
+    background:rgb(100,70,100);
+}
+
+#lily_gait_slider::groove:horizontal:hover,
+#lily_gait_slider_2::groove:horizontal:hover
+#lily_gait_slider_3::groove:horizontal:hover {
+    background:rgba(100,70,100,45);
+}
+
+/* ------------------------------------------------- 
+Lilys Table Views
+------------------------------------------------- */
+#time_in_room_table,
+#lily_diet_table,
+#lily_mood_table,
+#lily_walk_table,
+#lily_notes_table { 
+    background-color: transparent;
+    alternate-background-color: rgb(100, 157, 220);
+    selection-background-color: #7e57c2;
+    gridline-color:transparent;
+    color:rgb(245,245,245);
+}
+#time_in_room_table::item,
+#lily_diet_table::item,
+#lily_mood_table::item,
+#lily_walk_table::item,
+#lily_notes_table::item {
+    padding: 1px;
+    background:rgb(180, 149, 210);
+}
+#lily_notes_table::item:selected,
+#time_in_room_table::item:selected,
+#lily_diet_table::item:selected,
+#lily_mood_table::item:selected,
+#lily_walk_table::item:selected {
+    color: #fff;
+    background:rgb(23, 23, 23);
+}
+
+/*
+LILY MOOD SLIDERS AND SPINBOXES ETC.
+*/
+#lily_time_in_room_slider::handle:horizontal {
+    background:rgb(205,178,214);
+}
+#lily_time_in_room_slider::handle:horizontal:hover {
+    background:rgb(235,208,244);
+}
+#lily_time_in_room_slider::handle:horizontal:pressed {
+    background:rgb(185,158,194);
+}
+#lily_time_in_room_slider::sub-page:horizontal {
+    background:rgb(205,178,214);
+}
+#lily_time_in_room_slider::groove:horizontal:hover {
+    background:rgba(205,178,214,45);
+}
+
+#lily_mood_slider::handle:horizontal {
+    background:rgb(160,130,160);
+}
+#lily_mood_slider::handle:horizontal:hover {
+    background:rgb(190,160,190);
+}
+#lily_mood_slider::handle:horizontal:pressed {
+    background:rgb(140,110,140);
+}
+#lily_mood_slider::sub-page:horizontal {
+    background:rgb(160,130,160);
+}
+#lily_mood_slider::groove:horizontal:hover {
+    background:rgba(160,130,160,45);
+}
+
+#lily_mood_activity_slider::handle:horizontal {
+    background:rgb(130,100,130);
+}
+#lily_mood_activity_slider::handle:horizontal:hover {
+    background:rgb(160,130,160);
+}
+#lily_mood_activity_slider::handle:horizontal:pressed {
+    background:rgb(110,80,110);
+}
+#lily_mood_activity_slider::sub-page:horizontal {
+    background:rgb(130,100,130);
+}
+#lily_mood_activity_slider::groove:horizontal:hover {
+    background:rgba(130,100,130,45);
+}
+
+#lily_energy_slider::handle:horizontal {
+    background:rgb(100,70,100);
+}
+
+#lily_energy_slider::handle:horizontal:hover {
+    background:rgb(130,100,130);
+}
+
+#lily_energy_slider::handle:horizontal:pressed {
+    background:rgb(80,50,80);
+}
+
+#lily_energy_slider::sub-page:horizontal {
+    background:rgb(100,70,100);
+}
+
+#lily_energy_slider::groove:horizontal:hover {
+    background:rgba(100,70,100,45);
+}
+
+/* Time in Room */
+#lily_time_in_room {
+    background:transparent;
+    color:rgb(205,178,214);
+}
+
+#lily_time_in_room:hover {
+    color: rgb(225,198,234);
+}
+#lily_time_in_room:focus {
+    color: rgb(245,218,254);
+}
+
+/* Lily Mood */
+#lily_mood {
+    background:transparent;
+    color:rgb(160,130,160);
+}
+#lily_mood:hover {
+    color: rgb(180,150,180);
+}
+#lily_mood:focus {
+    color: rgb(200,170,200);
+}
+
+/* Lily Activity */
+#lily_activity  {
+    background:transparent;
+    color:rgb(130,100,130);
+}
+#lily_activity:hover {
+    color: rgb(150,120,150);
+}
+#lily_activity:focus {
+    color: rgb(170,140,170);
+}
+
+/* Lily Energy */
+#lily_energy {
+    background:transparent;
+    color:rgb(100,70,100);
+}
+#lily_energy:hover {
+    color: rgb(120,90,120);
+}
+#lily_energy:focus {
+    color: rgb(140,110,140);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+									QScrollBar
+//////////////////////////////////////////////////////////////////////////////////////////////// */
+QScrollBar:horizontal {
+	border: none;
+    background:transparent;
+    height: 12px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 3px;
+}
+QScrollBar::handle:horizontal {
+    background: rgb(35,35,37);
+    min-width:24px;
+    border-radius: 4px;
+}
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: transparent;
+    width: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: transparent;
+    width: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:horizontal, 
+QScrollBar::down-arrow:horizontal {
+    background: none;
+}
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+QScrollBar:vertical {
+    border: none;
+    background-color:transparent;
+    width: 12px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical {
+    background: rgb(35,35,37);
+    min-height: 12px;
+    border-radius: 4px;
+}
+QScrollBar::add-line:vertical {
+    border: none;
+    background: transparent;
+    height: 20px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: transparent;
+    height: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, 
+QScrollBar::down-arrow:vertical {
+    background: none;
+}
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>14</number>
+    </property>
+    <property name="topMargin">
+     <number>16</number>
+    </property>
+    <property name="rightMargin">
+     <number>14</number>
+    </property>
+    <property name="bottomMargin">
+     <number>16</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QStackedWidget" name="lilyStack">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="lilyInputPage">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>4</number>
+        </property>
+        <item row="3" column="0">
+         <widget class="QFrame" name="lily_diet_mood_input_container">
+          <layout class="QGridLayout" name="gridLayout_15">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="horizontalSpacing">
+            <number>6</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>4</number>
+           </property>
+           <item row="10" column="0">
+            <widget class="QLabel" name="na_43">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+font-weight:bold;
+background:transparent;
+color:rgb(130,100,130);
+}
+QLabel:hover {
+color: rgb(180,160,180);
+}
+    </string>
+             </property>
+             <property name="text">
+              <string>Lily's Activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QFrame" name="lily_diet_frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_71">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="spacing">
+               <number>0</number>
+              </property>
+             </layout>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="na_41">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press cntrl+T to commit Time in Room Data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+
+QLabel {
+font-weight:bold;
+color:rgb(205,178,214);
+}
+QLabel:hover {
+color: rgb(250,223,255);
+}
+    </string>
+             </property>
+             <property name="text">
+              <string>In Room</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QSpinBox" name="lily_activity">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>35</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Little Lilys activity for the day, that is, her gait, her joy, her spunk :D</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>-10</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="na_46">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+font-weight:bold;
+background:transparent;
+color:rgb(160,130,160);
+}
+QLabel:hover {
+color: rgb(210,180,210);
+}
+ </string>
+             </property>
+             <property name="text">
+              <string>Lily's Mood</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="4">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="2" colspan="2">
+            <widget class="QSlider" name="lily_time_in_room_slider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press cntrl+T to commit Time in Room Data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="2" colspan="2">
+            <widget class="QSlider" name="lily_energy_slider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Her overall energy, mostly to notice if she is acting sick</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="na_44">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+font-weight:bold;
+background:transparent;
+color:rgb(100,70,100);
+}
+QLabel:hover {
+color: rgb(150,120,150);
+}
+    </string>
+             </property>
+             <property name="text">
+              <string>Lily's Energy</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSpinBox" name="lily_time_in_room">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>35</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press cntrl+T to commit Time in Room Data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QSpinBox" name="lily_energy">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>35</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Her overall energy, mostly to notice if she is acting sick</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>-10</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2" colspan="2">
+            <widget class="QSlider" name="lily_mood_activity_slider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <property name="toolTip">
+              <string>Little Lilys activity for the day, that is, her gait, her joy, her spunk :D</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QSpinBox" name="lily_mood">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>35</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Little wiggly's mood for the day!</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <number>-10</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2" colspan="2">
+            <widget class="QSlider" name="lily_mood_slider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Little wiggly's mood for the day!</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="lily_walk_note_commit_btn">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press opt+cmd+w to commit walk data!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border:none;
+image: url(:/newPrefix/lily_walk_norm.png);
+max-width:12px;
+min-width:12px;
+max-height:12px;
+min-height:12px;
+}
+
+QPushButton:hover {
+image: url(:/newPrefix/lily_walk_one_hover.png);
+}
+
+QPushButton:pressed {
+image: url(:/newPrefix/lily_walk_checked_one.png);
+}
+
+
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>22</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QLineEdit" name="lily_walk_note">
+             <property name="styleSheet">
+              <string notr="true">
+/* //////////////////////////////////////////////////////////////////////////////////////////
+QComboBox Style Default
+////////////////////////////////////////////////////////////////////////////////////////// */
+QLineEdit {
+    border:none;
+	color:rgb(160,130,160);
+}
+
+QLineEdit:hover {
+    color: rgb(200,170,200);
+}
+
+QLineEdit:focus {
+    color: rgb(180,150,180);
+}
+    </string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="placeholderText">
+              <string>press the paw to commit note ➞</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QTextEdit" name="lily_notes">
+          <property name="styleSheet">
+           <string notr="true">
+/* //////////////////////////////////////////////////////////////////////////////////////////
+QComboBox Style Default
+////////////////////////////////////////////////////////////////////////////////////////// */
+QTextEdit {
+    border:none;
+	color:rgb(160,130,160);
+}
+
+QTextEdit:hover {
+    color: rgb(200,170,200);
+}
+
+QTextEdit:focus {
+    color: rgb(180,150,180);
+}
+    </string>
+          </property>
+          <property name="tabStopDistance">
+           <double>20.000000000000000</double>
+          </property>
+          <property name="placeholderText">
+           <string>lily's notes and such, use the button below to commit to the dbs! ❤ ⬇︎</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QFrame" name="button_catcher_frame">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="xx_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="lily_walk_btn">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press opt+cmd+w to commit walk data!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+QPushButton {
+border:none;
+image: url(:/newPrefix/lily_walk_norm.png);
+max-width:25px;
+min-width:25px;
+max-height:25px;
+min-height:25px;
+}
+
+QPushButton:hover {
+image: url(:/newPrefix/lily_walk_one_hover.png);
+}
+
+QPushButton:pressed {
+image: url(:/newPrefix/lily_walk_checked_one.png);
+}
+
+
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>22</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="xx_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="lily_ate_check">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Press to &lt;span style=&quot; font-style:italic;&quot;&gt;commit &lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Diet&lt;/span&gt; Data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+QPushButton {
+border:none;
+image: url(:/newPrefix/lilyasdfas.png);
+max-width:30px;
+min-width:30px;
+max-height:30px;
+min-height:30px;
+}
+
+QPushButton:hover {
+image: url(:/newPrefix/lilydiethover2.png);
+}
+
+QPushButton:pressed {
+image: url(:/newPrefix/lilydietchecked.png);
+}
+
+
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="xx">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QFrame" name="walk_mood_rate_frame">
+          <layout class="QGridLayout" name="gridLayout_10">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>0</number>
+           </property>
+           <item row="1" column="2">
+            <widget class="QSpinBox" name="lily_behavior">
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QSpinBox" name="lily_gait">
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QLabel" name="na_45">
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+background:transparent;
+font-weight:bold;
+color:rgb(144,114,144);
+}
+QLabel:hover {
+color:rgb(174,144,174);
+}</string>
+             </property>
+             <property name="text">
+              <string>Gait</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="na_42">
+             <property name="styleSheet">
+              <string notr="true">
+
+QLabel {
+font-weight:bold;
+color:rgb(205,178,214);
+}
+QLabel:hover {
+color: rgb(250,223,255);
+}
+    </string>
+             </property>
+             <property name="text">
+              <string>Behavior</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSlider" name="lily_behavior_slider">
+             <property name="toolTip">
+              <string>how well my lil lady 
+behaved, did she pull tons 
+or just a little?</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QSlider::handle:horizontal {
+    background:rgb(205,178,214);
+}
+QSlider::handle:horizontal:hover {
+    background:rgb(235,208,244);
+}
+QSlider::handle:horizontal:pressed {
+    background:rgb(185,158,194);
+}
+QSlider::sub-page:horizontal {
+    background:rgb(205,178,214);
+}
+QSlider::groove:horizontal:hover {
+    background:rgba(205,178,214,45);
+}</string>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QSlider" name="lily_gait_slider">
+             <property name="toolTip">
+              <string>How well my lady
+ walked the wilds!</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+/* ///////////////////////////////////////////////////////////////
+QSlider Colors
+/////////////////////////////////////////////////////////////// */
+
+QSlider::handle:horizontal {background:rgb(144,114,144);}
+QSlider::handle:horizontal:hover {background:rgb(174,144,174);}
+QSlider::handle:horizontal:pressed {background:rgb(124,94,124);}
+QSlider::sub-page:horizontal {background:rgb(144,114,144);}
+QSlider::groove:horizontal:hover {background:rgba(144,114,144,0.25);}
+</string>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="6" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="lily_note_commit_btn">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;press opt+cmd+w to commit walk data!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border:none;
+image: url(:/newPrefix/lily_walk_norm.png);
+max-width:14px;
+min-width:14px;
+max-height:14px;
+min-height:14px;
+}
+
+QPushButton:hover {
+image: url(:/newPrefix/lily_walk_one_hover.png);
+}
+
+QPushButton:pressed {
+image: url(:/newPrefix/lily_walk_checked_one.png);
+}
+
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="lilydataView">
+       <layout class="QGridLayout" name="gridLayout_66">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="lily_data_stack">
+          <property name="styleSheet">
+           <string notr="true">QTabWidget {
+    background-color: #121212;
+    border: none;
+}
+
+QTabWidget::pane {
+    border: none;    background-color: #121212;
+}
+
+QTabBar::tab {
+    background-color: #121212;
+    border: none;
+}
+
+QTabBar::tab:selected {
+    background-color: #121212;
+}
+
+QTabBar::tab:hover {
+     background-color: #121212;
+}
+
+QTabBar::tab:only-one {
+ background-color: #121212;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <widget class="QWidget" name="lily_data_stackPage1">
+           <attribute name="icon">
+            <iconset resource="../../QtResourcesFeb20/LilysLovely.qrc">
+             <normaloff>:/newPrefix/lily_walk_norm.png</normaloff>
+             <activeon>:/newPrefix/onePaw.png</activeon>:/newPrefix/lily_walk_norm.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string/>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_42">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="1" column="0" colspan="2">
+             <widget class="QFrame" name="frame_35">
+              <layout class="QGridLayout" name="gridLayout_43">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QFrame" name="frame_36">
+                 <layout class="QGridLayout" name="gridLayout_6">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QTableView" name="lily_walk_table">
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="showGrid">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sortingEnabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="cornerButtonEnabled">
+                     <bool>false</bool>
+                    </property>
+                    <attribute name="horizontalHeaderCascadingSectionResizes">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="horizontalHeaderMinimumSectionSize">
+                     <number>15</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>75</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderCascadingSectionResizes">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                     <bool>true</bool>
+                    </attribute>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QTableView" name="lily_walk_note_table">
+                    <property name="styleSheet">
+                     <string notr="true">QTableView { 
+    background-color: transparent;
+    alternate-background-color: rgb(100, 157, 220);
+    selection-background-color: #7e57c2;
+    gridline-color:transparent;
+    color:rgb(245,245,245);
+}
+QTableView::item {
+    padding: 1px;
+    background:rgb(180, 149, 210);
+}
+QTableView::item:selected {
+    color: #fff;
+    background:rgb(23, 23, 23);
+}</string>
+                    </property>
+                    <property name="showGrid">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sortingEnabled">
+                     <bool>true</bool>
+                    </property>
+                    <attribute name="horizontalHeaderCascadingSectionResizes">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="horizontalHeaderMinimumSectionSize">
+                     <number>15</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>75</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderCascadingSectionResizes">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                     <bool>true</bool>
+                    </attribute>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="Line" name="line_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lily_note_table_contain">
+           <attribute name="icon">
+            <iconset resource="../../QtResourcesFeb20/LilysLovely.qrc">
+             <normaloff>:/newPrefix/lilynotes1.png</normaloff>
+             <activeon>:/newPrefix/lilynoteChecked.png</activeon>:/newPrefix/lilynotes1.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string/>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTableView" name="lily_notes_table">
+              <property name="showGrid">
+               <bool>false</bool>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>50</number>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>150</number>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>true</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lily_data_stackPage2">
+           <attribute name="icon">
+            <iconset resource="../../QtResourcesFeb20/LilysLovely.qrc">
+             <normaloff>:/newPrefix/lilyasdfas.png</normaloff>
+             <activeon>:/newPrefix/Mac App icon 46.png</activeon>:/newPrefix/lilyasdfas.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string/>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_55">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0" colspan="2">
+             <widget class="QFrame" name="frame_38">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QTableView" name="lily_diet_table">
+                 <property name="showGrid">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sortingEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="horizontalHeaderCascadingSectionResizes">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderMinimumSectionSize">
+                  <number>50</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>150</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderCascadingSectionResizes">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                  <bool>true</bool>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lily_data_stackPage3">
+           <attribute name="icon">
+            <iconset resource="../../QtResourcesFeb20/LilysLovely.qrc">
+             <normaloff>:/newPrefix/lily_mood_norm.png</normaloff>
+             <activeon>:/newPrefix/Mac App icon 50.png</activeon>:/newPrefix/lily_mood_norm.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string/>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_57">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0" colspan="2">
+             <widget class="QFrame" name="mood_container">
+              <layout class="QGridLayout" name="gridLayout_3">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="1" column="0">
+                <widget class="QTableView" name="lily_mood_table">
+                 <property name="showGrid">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sortingEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="horizontalHeaderCascadingSectionResizes">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderMinimumSectionSize">
+                  <number>50</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>150</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderCascadingSectionResizes">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                  <bool>true</bool>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lily_data_stackPage4">
+           <attribute name="icon">
+            <iconset resource="../../QtResourcesFeb20/LilysLovely.qrc">
+             <normaloff>:/newPrefix/roomTime2.png</normaloff>
+             <activeon>:/newPrefix/timeisdf.png</activeon>:/newPrefix/roomTime2.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string/>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QTableView" name="time_in_room_table">
+              <property name="showGrid">
+               <bool>false</bool>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>50</number>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>150</number>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>true</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QDateEdit" name="lily_date">
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="displayFormat">
+           <string>yyyy/MM/dd</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTimeEdit" name="lily_time">
+          <property name="styleSheet">
+           <string notr="true">
+QTimeEdit {
+color:rgb(205,178,214);
+font-size:10pt;
+}
+QTimeEdit:hover {
+color: rgb(225,198,234);
+}
+QTimeEdit:focus {
+color: rgb(245,218,254);
+}
+    </string>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="displayFormat">
+           <string>hh:mm:ss</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>237</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLily_Loves">
+    <property name="title">
+     <string>Lily Loves </string>
+    </property>
+    <addaction name="action_input_page"/>
+    <addaction name="action_data_view_page"/>
+    <addaction name="actionMinimize"/>
+    <addaction name="actionMaximize"/>
+   </widget>
+   <widget class="QMenu" name="menuData_Op">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <widget class="QMenu" name="menuCommit">
+     <property name="title">
+      <string>Commit</string>
+     </property>
+     <addaction name="action_commit_mood"/>
+     <addaction name="action_commit_room_time"/>
+     <addaction name="action_commit_lily_notes"/>
+     <addaction name="actionCommit_Lily_Walk_Notes"/>
+    </widget>
+    <addaction name="menuCommit"/>
+    <addaction name="action_delete_record"/>
+   </widget>
+   <addaction name="menuLily_Loves"/>
+   <addaction name="menuData_Op"/>
+  </widget>
+  <action name="action_input_page">
+   <property name="text">
+    <string>Input Page</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="action_data_view_page">
+   <property name="text">
+    <string>Data View Page</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="action_commit_mood">
+   <property name="text">
+    <string>Commit Mood Data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+M</string>
+   </property>
+  </action>
+  <action name="actionMinimize">
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+M</string>
+   </property>
+  </action>
+  <action name="actionMaximize">
+   <property name="text">
+    <string>Maximize</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="action_commit_room_time">
+   <property name="text">
+    <string>Commit Time In Room Data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+T</string>
+   </property>
+  </action>
+  <action name="action_delete_record">
+   <property name="text">
+    <string>Delete Record</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="action_commit_lily_notes">
+   <property name="text">
+    <string>Commit Lilys Notes</string>
+   </property>
+   <property name="toolTip">
+    <string>Commit Notes to Database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionCommit_Lily_Walk_Notes">
+   <property name="text">
+    <string>Commit Lily Walk Notes</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lily_walk_table</tabstop>
+  <tabstop>lily_diet_table</tabstop>
+  <tabstop>lily_mood_table</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../QtResourcesFeb20/LilysLovely.qrc"/>
+ </resources>
+ <connections/>
+</ui>
