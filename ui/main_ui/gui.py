@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(232, 264)
+        MainWindow.resize(237, 310)
         MainWindow.setStyleSheet("QWidget {\n"
 "    font: 11pt \"Poppins\";\n"
 "    background:#121212;\n"
@@ -647,13 +647,14 @@ class Ui_MainWindow(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.lilyInputPage)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setHorizontalSpacing(0)
-        self.gridLayout_2.setVerticalSpacing(6)
+        self.gridLayout_2.setVerticalSpacing(4)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.lily_diet_mood_input_container = QtWidgets.QFrame(parent=self.lilyInputPage)
         self.lily_diet_mood_input_container.setObjectName("lily_diet_mood_input_container")
         self.gridLayout_15 = QtWidgets.QGridLayout(self.lily_diet_mood_input_container)
         self.gridLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_15.setSpacing(0)
+        self.gridLayout_15.setHorizontalSpacing(6)
+        self.gridLayout_15.setVerticalSpacing(4)
         self.gridLayout_15.setObjectName("gridLayout_15")
         self.na_43 = QtWidgets.QLabel(parent=self.lily_diet_mood_input_container)
         self.na_43.setMaximumSize(QtCore.QSize(100, 16777215))
@@ -838,98 +839,32 @@ class Ui_MainWindow(object):
         self.lily_mood_slider.setTickPosition(QtWidgets.QSlider.TickPosition.NoTicks)
         self.lily_mood_slider.setObjectName("lily_mood_slider")
         self.gridLayout_15.addWidget(self.lily_mood_slider, 9, 2, 1, 2)
-        self.gridLayout_2.addWidget(self.lily_diet_mood_input_container, 3, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.gridLayout_2.addItem(spacerItem1, 0, 0, 1, 1)
-        self.walk_mood_rate_frame = QtWidgets.QFrame(parent=self.lilyInputPage)
-        self.walk_mood_rate_frame.setObjectName("walk_mood_rate_frame")
-        self.gridLayout_10 = QtWidgets.QGridLayout(self.walk_mood_rate_frame)
-        self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_10.setVerticalSpacing(0)
-        self.gridLayout_10.setObjectName("gridLayout_10")
-        self.na_45 = QtWidgets.QLabel(parent=self.walk_mood_rate_frame)
-        self.na_45.setStyleSheet("QLabel {\n"
-"background:transparent;\n"
-"font-weight:bold;\n"
-"color:rgb(144,114,144);\n"
+        self.lily_walk_note_commit_btn = QtWidgets.QPushButton(parent=self.lily_diet_mood_input_container)
+        self.lily_walk_note_commit_btn.setStyleSheet("QPushButton {\n"
+"border:none;\n"
+"image: url(:/newPrefix/lily_walk_norm.png);\n"
+"max-width:12px;\n"
+"min-width:12px;\n"
+"max-height:12px;\n"
+"min-height:12px;\n"
 "}\n"
-"QLabel:hover {\n"
-"color:rgb(174,144,174);\n"
-"}")
-        self.na_45.setObjectName("na_45")
-        self.gridLayout_10.addWidget(self.na_45, 2, 1, 1, 1)
-        self.na_42 = QtWidgets.QLabel(parent=self.walk_mood_rate_frame)
-        self.na_42.setStyleSheet("\n"
 "\n"
-"QLabel {\n"
-"font-weight:bold;\n"
-"color:rgb(205,178,214);\n"
+"QPushButton:hover {\n"
+"image: url(:/newPrefix/lily_walk_one_hover.png);\n"
 "}\n"
-"QLabel:hover {\n"
-"color: rgb(250,223,255);\n"
-"}\n"
-"    ")
-        self.na_42.setObjectName("na_42")
-        self.gridLayout_10.addWidget(self.na_42, 1, 1, 1, 1)
-        self.lily_behavior_slider = QtWidgets.QSlider(parent=self.walk_mood_rate_frame)
-        self.lily_behavior_slider.setStyleSheet("QSlider::handle:horizontal {\n"
-"    background:rgb(205,178,214);\n"
-"}\n"
-"QSlider::handle:horizontal:hover {\n"
-"    background:rgb(235,208,244);\n"
-"}\n"
-"QSlider::handle:horizontal:pressed {\n"
-"    background:rgb(185,158,194);\n"
-"}\n"
-"QSlider::sub-page:horizontal {\n"
-"    background:rgb(205,178,214);\n"
-"}\n"
-"QSlider::groove:horizontal:hover {\n"
-"    background:rgba(205,178,214,45);\n"
-"}")
-        self.lily_behavior_slider.setMinimum(0)
-        self.lily_behavior_slider.setMaximum(100)
-        self.lily_behavior_slider.setOrientation(QtCore.Qt.Orientation.Horizontal)
-        self.lily_behavior_slider.setTickPosition(QtWidgets.QSlider.TickPosition.NoTicks)
-        self.lily_behavior_slider.setObjectName("lily_behavior_slider")
-        self.gridLayout_10.addWidget(self.lily_behavior_slider, 1, 3, 1, 1)
-        self.lily_gait = QtWidgets.QSpinBox(parent=self.walk_mood_rate_frame)
-        self.lily_gait.setFrame(False)
-        self.lily_gait.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.lily_gait.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
-        self.lily_gait.setSuffix("")
-        self.lily_gait.setMinimum(0)
-        self.lily_gait.setMaximum(100)
-        self.lily_gait.setObjectName("lily_gait")
-        self.gridLayout_10.addWidget(self.lily_gait, 2, 2, 1, 1)
-        self.lily_behavior = QtWidgets.QSpinBox(parent=self.walk_mood_rate_frame)
-        self.lily_behavior.setFrame(False)
-        self.lily_behavior.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.lily_behavior.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
-        self.lily_behavior.setSuffix("")
-        self.lily_behavior.setMinimum(0)
-        self.lily_behavior.setMaximum(100)
-        self.lily_behavior.setObjectName("lily_behavior")
-        self.gridLayout_10.addWidget(self.lily_behavior, 1, 2, 1, 1)
-        self.lily_gait_slider = QtWidgets.QSlider(parent=self.walk_mood_rate_frame)
-        self.lily_gait_slider.setStyleSheet("\n"
-"/* ///////////////////////////////////////////////////////////////\n"
-"QSlider Colors\n"
-"/////////////////////////////////////////////////////////////// */\n"
 "\n"
-"QSlider::handle:horizontal {background:rgb(144,114,144);}\n"
-"QSlider::handle:horizontal:hover {background:rgb(174,144,174);}\n"
-"QSlider::handle:horizontal:pressed {background:rgb(124,94,124);}\n"
-"QSlider::sub-page:horizontal {background:rgb(144,114,144);}\n"
-"QSlider::groove:horizontal:hover {background:rgba(144,114,144,0.25);}\n"
+"QPushButton:pressed {\n"
+"image: url(:/newPrefix/lily_walk_checked_one.png);\n"
+"}\n"
+"\n"
+"\n"
 "")
-        self.lily_gait_slider.setMinimum(0)
-        self.lily_gait_slider.setMaximum(100)
-        self.lily_gait_slider.setOrientation(QtCore.Qt.Orientation.Horizontal)
-        self.lily_gait_slider.setTickPosition(QtWidgets.QSlider.TickPosition.NoTicks)
-        self.lily_gait_slider.setObjectName("lily_gait_slider")
-        self.gridLayout_10.addWidget(self.lily_gait_slider, 2, 3, 1, 1)
-        self.lily_walk_note = QtWidgets.QLineEdit(parent=self.walk_mood_rate_frame)
+        self.lily_walk_note_commit_btn.setText("")
+        self.lily_walk_note_commit_btn.setIconSize(QtCore.QSize(22, 22))
+        self.lily_walk_note_commit_btn.setCheckable(False)
+        self.lily_walk_note_commit_btn.setObjectName("lily_walk_note_commit_btn")
+        self.gridLayout_15.addWidget(self.lily_walk_note_commit_btn, 0, 3, 1, 1)
+        self.lily_walk_note = QtWidgets.QLineEdit(parent=self.lily_diet_mood_input_container)
         self.lily_walk_note.setStyleSheet("\n"
 "/* //////////////////////////////////////////////////////////////////////////////////////////\n"
 "QComboBox Style Default\n"
@@ -947,10 +882,11 @@ class Ui_MainWindow(object):
 "    color: rgb(180,150,180);\n"
 "}\n"
 "    ")
+        self.lily_walk_note.setFrame(False)
         self.lily_walk_note.setClearButtonEnabled(False)
         self.lily_walk_note.setObjectName("lily_walk_note")
-        self.gridLayout_10.addWidget(self.lily_walk_note, 3, 1, 1, 3)
-        self.gridLayout_2.addWidget(self.walk_mood_rate_frame, 2, 0, 1, 1)
+        self.gridLayout_15.addWidget(self.lily_walk_note, 0, 0, 1, 3)
+        self.gridLayout_2.addWidget(self.lily_diet_mood_input_container, 3, 0, 1, 1)
         self.lily_notes = QtWidgets.QTextEdit(parent=self.lilyInputPage)
         self.lily_notes.setStyleSheet("\n"
 "/* //////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -971,7 +907,9 @@ class Ui_MainWindow(object):
 "    ")
         self.lily_notes.setTabStopDistance(20.0)
         self.lily_notes.setObjectName("lily_notes")
-        self.gridLayout_2.addWidget(self.lily_notes, 4, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.lily_notes, 5, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.gridLayout_2.addItem(spacerItem1, 0, 0, 1, 1)
         self.button_catcher_frame = QtWidgets.QFrame(parent=self.lilyInputPage)
         self.button_catcher_frame.setObjectName("button_catcher_frame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.button_catcher_frame)
@@ -985,10 +923,10 @@ class Ui_MainWindow(object):
 "QPushButton {\n"
 "border:none;\n"
 "image: url(:/newPrefix/lily_walk_norm.png);\n"
-"max-width:30px;\n"
-"min-width:30px;\n"
-"max-height:30px;\n"
-"min-height:30px;\n"
+"max-width:25px;\n"
+"min-width:25px;\n"
+"max-height:25px;\n"
+"min-height:25px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -1038,6 +976,120 @@ class Ui_MainWindow(object):
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout.addItem(spacerItem4)
         self.gridLayout_2.addWidget(self.button_catcher_frame, 1, 0, 1, 1)
+        self.walk_mood_rate_frame = QtWidgets.QFrame(parent=self.lilyInputPage)
+        self.walk_mood_rate_frame.setObjectName("walk_mood_rate_frame")
+        self.gridLayout_10 = QtWidgets.QGridLayout(self.walk_mood_rate_frame)
+        self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_10.setVerticalSpacing(0)
+        self.gridLayout_10.setObjectName("gridLayout_10")
+        self.lily_behavior = QtWidgets.QSpinBox(parent=self.walk_mood_rate_frame)
+        self.lily_behavior.setFrame(False)
+        self.lily_behavior.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lily_behavior.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
+        self.lily_behavior.setSuffix("")
+        self.lily_behavior.setMinimum(0)
+        self.lily_behavior.setMaximum(100)
+        self.lily_behavior.setObjectName("lily_behavior")
+        self.gridLayout_10.addWidget(self.lily_behavior, 1, 2, 1, 1)
+        self.lily_gait = QtWidgets.QSpinBox(parent=self.walk_mood_rate_frame)
+        self.lily_gait.setFrame(False)
+        self.lily_gait.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lily_gait.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
+        self.lily_gait.setSuffix("")
+        self.lily_gait.setMinimum(0)
+        self.lily_gait.setMaximum(100)
+        self.lily_gait.setObjectName("lily_gait")
+        self.gridLayout_10.addWidget(self.lily_gait, 2, 2, 1, 1)
+        self.na_45 = QtWidgets.QLabel(parent=self.walk_mood_rate_frame)
+        self.na_45.setStyleSheet("QLabel {\n"
+"background:transparent;\n"
+"font-weight:bold;\n"
+"color:rgb(144,114,144);\n"
+"}\n"
+"QLabel:hover {\n"
+"color:rgb(174,144,174);\n"
+"}")
+        self.na_45.setObjectName("na_45")
+        self.gridLayout_10.addWidget(self.na_45, 2, 0, 1, 2)
+        self.na_42 = QtWidgets.QLabel(parent=self.walk_mood_rate_frame)
+        self.na_42.setStyleSheet("\n"
+"\n"
+"QLabel {\n"
+"font-weight:bold;\n"
+"color:rgb(205,178,214);\n"
+"}\n"
+"QLabel:hover {\n"
+"color: rgb(250,223,255);\n"
+"}\n"
+"    ")
+        self.na_42.setObjectName("na_42")
+        self.gridLayout_10.addWidget(self.na_42, 1, 0, 1, 1)
+        self.lily_behavior_slider = QtWidgets.QSlider(parent=self.walk_mood_rate_frame)
+        self.lily_behavior_slider.setStyleSheet("QSlider::handle:horizontal {\n"
+"    background:rgb(205,178,214);\n"
+"}\n"
+"QSlider::handle:horizontal:hover {\n"
+"    background:rgb(235,208,244);\n"
+"}\n"
+"QSlider::handle:horizontal:pressed {\n"
+"    background:rgb(185,158,194);\n"
+"}\n"
+"QSlider::sub-page:horizontal {\n"
+"    background:rgb(205,178,214);\n"
+"}\n"
+"QSlider::groove:horizontal:hover {\n"
+"    background:rgba(205,178,214,45);\n"
+"}")
+        self.lily_behavior_slider.setMinimum(0)
+        self.lily_behavior_slider.setMaximum(100)
+        self.lily_behavior_slider.setOrientation(QtCore.Qt.Orientation.Horizontal)
+        self.lily_behavior_slider.setTickPosition(QtWidgets.QSlider.TickPosition.NoTicks)
+        self.lily_behavior_slider.setObjectName("lily_behavior_slider")
+        self.gridLayout_10.addWidget(self.lily_behavior_slider, 1, 3, 1, 1)
+        self.lily_gait_slider = QtWidgets.QSlider(parent=self.walk_mood_rate_frame)
+        self.lily_gait_slider.setStyleSheet("\n"
+"/* ///////////////////////////////////////////////////////////////\n"
+"QSlider Colors\n"
+"/////////////////////////////////////////////////////////////// */\n"
+"\n"
+"QSlider::handle:horizontal {background:rgb(144,114,144);}\n"
+"QSlider::handle:horizontal:hover {background:rgb(174,144,174);}\n"
+"QSlider::handle:horizontal:pressed {background:rgb(124,94,124);}\n"
+"QSlider::sub-page:horizontal {background:rgb(144,114,144);}\n"
+"QSlider::groove:horizontal:hover {background:rgba(144,114,144,0.25);}\n"
+"")
+        self.lily_gait_slider.setMinimum(0)
+        self.lily_gait_slider.setMaximum(100)
+        self.lily_gait_slider.setOrientation(QtCore.Qt.Orientation.Horizontal)
+        self.lily_gait_slider.setTickPosition(QtWidgets.QSlider.TickPosition.NoTicks)
+        self.lily_gait_slider.setObjectName("lily_gait_slider")
+        self.gridLayout_10.addWidget(self.lily_gait_slider, 2, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.walk_mood_rate_frame, 2, 0, 1, 1)
+        self.lily_note_commit_btn = QtWidgets.QPushButton(parent=self.lilyInputPage)
+        self.lily_note_commit_btn.setStyleSheet("QPushButton {\n"
+"border:none;\n"
+"image: url(:/newPrefix/lily_walk_norm.png);\n"
+"max-width:14px;\n"
+"min-width:14px;\n"
+"max-height:14px;\n"
+"min-height:14px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"image: url(:/newPrefix/lily_walk_one_hover.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"image: url(:/newPrefix/lily_walk_checked_one.png);\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.lily_note_commit_btn.setText("")
+        self.lily_note_commit_btn.setIconSize(QtCore.QSize(22, 22))
+        self.lily_note_commit_btn.setCheckable(False)
+        self.lily_note_commit_btn.setObjectName("lily_note_commit_btn")
+        self.gridLayout_2.addWidget(self.lily_note_commit_btn, 6, 0, 1, 1, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.lilyStack.addWidget(self.lilyInputPage)
         self.lilydataView = QtWidgets.QWidget()
         self.lilydataView.setObjectName("lilydataView")
@@ -1095,10 +1147,11 @@ class Ui_MainWindow(object):
         self.lily_walk_table.setStyleSheet("")
         self.lily_walk_table.setShowGrid(False)
         self.lily_walk_table.setSortingEnabled(True)
+        self.lily_walk_table.setCornerButtonEnabled(False)
         self.lily_walk_table.setObjectName("lily_walk_table")
         self.lily_walk_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.lily_walk_table.horizontalHeader().setDefaultSectionSize(150)
-        self.lily_walk_table.horizontalHeader().setMinimumSectionSize(50)
+        self.lily_walk_table.horizontalHeader().setDefaultSectionSize(75)
+        self.lily_walk_table.horizontalHeader().setMinimumSectionSize(15)
         self.lily_walk_table.horizontalHeader().setStretchLastSection(True)
         self.lily_walk_table.verticalHeader().setCascadingSectionResizes(True)
         self.lily_walk_table.verticalHeader().setSortIndicatorShown(True)
@@ -1123,8 +1176,8 @@ class Ui_MainWindow(object):
         self.lily_walk_note_table.setSortingEnabled(True)
         self.lily_walk_note_table.setObjectName("lily_walk_note_table")
         self.lily_walk_note_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.lily_walk_note_table.horizontalHeader().setDefaultSectionSize(150)
-        self.lily_walk_note_table.horizontalHeader().setMinimumSectionSize(50)
+        self.lily_walk_note_table.horizontalHeader().setDefaultSectionSize(75)
+        self.lily_walk_note_table.horizontalHeader().setMinimumSectionSize(15)
         self.lily_walk_note_table.horizontalHeader().setStretchLastSection(True)
         self.lily_walk_note_table.verticalHeader().setCascadingSectionResizes(True)
         self.lily_walk_note_table.verticalHeader().setSortIndicatorShown(True)
@@ -1272,7 +1325,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.lilyStack, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 232, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 237, 18))
         self.menubar.setObjectName("menubar")
         self.menuLily_Loves = QtWidgets.QMenu(parent=self.menubar)
         self.menuLily_Loves.setObjectName("menuLily_Loves")
@@ -1297,6 +1350,8 @@ class Ui_MainWindow(object):
         self.action_delete_record.setObjectName("action_delete_record")
         self.action_commit_lily_notes = QtGui.QAction(parent=MainWindow)
         self.action_commit_lily_notes.setObjectName("action_commit_lily_notes")
+        self.actionCommit_Lily_Walk_Notes = QtGui.QAction(parent=MainWindow)
+        self.actionCommit_Lily_Walk_Notes.setObjectName("actionCommit_Lily_Walk_Notes")
         self.menuLily_Loves.addAction(self.action_input_page)
         self.menuLily_Loves.addAction(self.action_data_view_page)
         self.menuLily_Loves.addAction(self.actionMinimize)
@@ -1304,6 +1359,7 @@ class Ui_MainWindow(object):
         self.menuCommit.addAction(self.action_commit_mood)
         self.menuCommit.addAction(self.action_commit_room_time)
         self.menuCommit.addAction(self.action_commit_lily_notes)
+        self.menuCommit.addAction(self.actionCommit_Lily_Walk_Notes)
         self.menuData_Op.addAction(self.menuCommit.menuAction())
         self.menuData_Op.addAction(self.action_delete_record)
         self.menubar.addAction(self.menuLily_Loves.menuAction())
@@ -1332,6 +1388,11 @@ class Ui_MainWindow(object):
         self.lily_mood_activity_slider.setToolTip(_translate("MainWindow", "Little Lilys activity for the day, that is, her gait, her joy, her spunk :D"))
         self.lily_mood.setToolTip(_translate("MainWindow", "Little wiggly\'s mood for the day!"))
         self.lily_mood_slider.setToolTip(_translate("MainWindow", "Little wiggly\'s mood for the day!"))
+        self.lily_walk_note_commit_btn.setToolTip(_translate("MainWindow", "<html><head/><body><p>press opt+cmd+w to commit walk data!</p></body></html>"))
+        self.lily_walk_note.setPlaceholderText(_translate("MainWindow", "press the paw to commit note ➞"))
+        self.lily_notes.setPlaceholderText(_translate("MainWindow", "lily\'s notes and such, use the button below to commit to the dbs! ❤ ⬇︎"))
+        self.lily_walk_btn.setToolTip(_translate("MainWindow", "<html><head/><body><p>press opt+cmd+w to commit walk data!</p></body></html>"))
+        self.lily_ate_check.setToolTip(_translate("MainWindow", "<html><head/><body><p>Press to <span style=\" font-style:italic;\">commit </span><span style=\" font-weight:600;\">Diet</span> Data</p></body></html>"))
         self.na_45.setText(_translate("MainWindow", "Gait"))
         self.na_42.setText(_translate("MainWindow", "Behavior"))
         self.lily_behavior_slider.setToolTip(_translate("MainWindow", "how well my lil lady \n"
@@ -1339,10 +1400,7 @@ class Ui_MainWindow(object):
 "or just a little?"))
         self.lily_gait_slider.setToolTip(_translate("MainWindow", "How well my lady\n"
 " walked the wilds!"))
-        self.lily_walk_note.setPlaceholderText(_translate("MainWindow", "walk stories! <3"))
-        self.lily_notes.setPlaceholderText(_translate("MainWindow", "...any notes about the lil lady outside of all things above?"))
-        self.lily_walk_btn.setToolTip(_translate("MainWindow", "<html><head/><body><p>press opt+cmd+w to commit walk data!</p></body></html>"))
-        self.lily_ate_check.setToolTip(_translate("MainWindow", "<html><head/><body><p>Press to <span style=\" font-style:italic;\">commit </span><span style=\" font-weight:600;\">Diet</span> Data</p></body></html>"))
+        self.lily_note_commit_btn.setToolTip(_translate("MainWindow", "<html><head/><body><p>press opt+cmd+w to commit walk data!</p></body></html>"))
         self.lily_date.setDisplayFormat(_translate("MainWindow", "yyyy/MM/dd"))
         self.lily_time.setDisplayFormat(_translate("MainWindow", "hh:mm:ss"))
         self.menuLily_Loves.setTitle(_translate("MainWindow", "Lily Loves "))
@@ -1365,3 +1423,4 @@ class Ui_MainWindow(object):
         self.action_commit_lily_notes.setText(_translate("MainWindow", "Commit Lilys Notes"))
         self.action_commit_lily_notes.setToolTip(_translate("MainWindow", "Commit Notes to Database"))
         self.action_commit_lily_notes.setShortcut(_translate("MainWindow", "Ctrl+N"))
+        self.actionCommit_Lily_Walk_Notes.setText(_translate("MainWindow", "Commit Lily Walk Notes"))

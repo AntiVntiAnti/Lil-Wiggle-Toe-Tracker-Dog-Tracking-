@@ -114,8 +114,8 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         - None
         """
         self.lilyStack.setCurrentWidget(self.lilyInputPage)
-        self.resize(240, 275)
-        self.setFixedSize(240, 275)
+        self.resize(245, 270)
+        self.setFixedSize(245, 270)
     
     def switch_to_dataview_size_setter(self):
         """
@@ -359,7 +359,7 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         - None
         """
         try:
-            self.action_commit_lily_notes.triggered.connect(lambda: add_lily_note_data(self, {
+            self.lily_note_commit_btn.clicked.connect(lambda: add_lily_note_data(self, {
                 "lily_date": "lily_date", "lily_time": "lily_time",
                 "lily_notes": "lily_notes",
                 "model": "lily_note_model",
@@ -430,7 +430,7 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
 
         """
         try:
-            self.lily_walk_btn.clicked.connect(lambda: add_lily_walk_notes(self, {
+            self.lily_walk_note_commit_btn.clicked.connect(lambda: add_lily_walk_notes(self, {
                 "lily_date": "lily_date", "lily_time": "lily_time",
                 "lily_walk_note": "lily_walk_note", "model": "lily_walk_note_model"
             }, self.db_manager.insert_into_lily_walk_notes_table, ))
