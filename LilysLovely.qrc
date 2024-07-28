@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>onePaw.png</file>
+    <file>Mac App icon 46.png</file>
+    <file>Mac App icon 50.png</file>
+    <file>timeisdf.png</file>
+    <file>roomTime2.png</file>
+    <file>lilyRoom.png</file>
+    <file>lilynoteChecked.png</file>
+    <file>lilynotes1.png</file>
+    <file>lilyNotes.png</file>
+    <file>lilyasdfas.png</file>
+    <file>lilydiethover2.png</file>
+    <file>lilydiethover1.png</file>
+    <file>lily_mood_norm.png</file>
+    <file>lily_walk_norm.png</file>
+    <file>lily_walk_one_hover.png</file>
+    <file>lily_walk_checked_one.png</file>
+  </qresource>
+</RCC>
