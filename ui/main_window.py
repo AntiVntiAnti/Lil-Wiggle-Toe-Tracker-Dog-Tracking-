@@ -114,8 +114,8 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         - None
         """
         self.lilyStack.setCurrentWidget(self.lilyInputPage)
-        self.resize(245, 270)
-        self.setFixedSize(245, 270)
+        self.resize(275, 315)
+        self.setFixedSize(275, 315)
     
     def switch_to_dataview_size_setter(self):
         """

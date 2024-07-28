@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(237, 310)
+        MainWindow.resize(268, 294)
         MainWindow.setStyleSheet("QWidget {\n"
 "    font: 11pt \"Poppins\";\n"
 "    background:#121212;\n"
@@ -105,10 +105,10 @@ class Ui_MainWindow(object):
 "    background:transparent;\n"
 "}\n"
 "QSlider::groove:horizontal {\n"
-"    border-radius: 5px;\n"
-"    height: 10px;\n"
+"    border-radius: 7px;\n"
+"    height: 15px;\n"
 "    margin: 0px;\n"
-"    background:rgb(22, 22, 22);\n"
+"    background:transparent;\n"
 "    }\n"
 "\n"
 "QSlider::groove:horizontal:hover {\n"
@@ -116,13 +116,14 @@ class Ui_MainWindow(object):
 "}\n"
 "QSlider::handle:horizontal {\n"
 "    background: rgb(255, 255, 255);\n"
-"    height: 10px;\n"
-"    width: 10px;\n"
+"    height: 14px;\n"
+"    width: 14px;\n"
 "    margin: 0px;\n"
-"    border-radius:5px;\n"
+"    border-radius:7px;\n"
 "}\n"
 "QSlider::sub-page:horizontal {\n"
-"    background:transparent;\n"
+"    background:transparent;    \n"
+"    border-radius:7px;\n"
 "}\n"
 "QSlider::handle:horizontal:hover {\n"
 "    background-color: white;\n"
@@ -348,14 +349,16 @@ class Ui_MainWindow(object):
 "#lily_behavior_slider::handle:horizontal:pressed {\n"
 "    background:rgb(140,110,140);\n"
 "}\n"
-"#lily_behavior_slider_3::sub-page:horizontal,\n"
-"#lily_behavior_slider_2::sub-page:horizontal,\n"
-"#lily_behavior_slider::sub-page:horizontal {\n"
-"    background:rgb(160,130,160);\n"
-"}\n"
+"\n"
 "#lily_behavior_slider_3::groove:horizontal:hover,\n"
 "#lily_behavior_slider_2::groove:horizontal:hover,\n"
 "#lily_behavior_slider::groove:horizontal:hover {\n"
+"    background:rgba(160,130,160,45);\n"
+"}\n"
+"\n"
+"#lily_behavior_slider_3::groove:horizontal,\n"
+"#lily_behavior_slider_2::groove:horizontal,\n"
+"#lily_behavior_slider::groove:horizontal {\n"
 "    background:rgba(160,130,160,45);\n"
 "}\n"
 "\n"
@@ -393,15 +396,15 @@ class Ui_MainWindow(object):
 "    background:rgb(80,50,80);\n"
 "}\n"
 "\n"
-"#lily_gait_slider::sub-page:horizontal,\n"
-"#lily_gait_slider_2::sub-page:horizontal,\n"
-"#lily_gait_slider_3::sub-page:horizontal {\n"
-"    background:rgb(100,70,100);\n"
-"}\n"
 "\n"
 "#lily_gait_slider::groove:horizontal:hover,\n"
 "#lily_gait_slider_2::groove:horizontal:hover\n"
 "#lily_gait_slider_3::groove:horizontal:hover {\n"
+"    background:rgba(100,70,100,45);\n"
+"}\n"
+"#lily_gait_slider::groove:horizontal,\n"
+"#lily_gait_slider_2::groove:horizontal,\n"
+"#lily_gait_slider_3::groove:horizontal {\n"
 "    background:rgba(100,70,100,45);\n"
 "}\n"
 "\n"
@@ -448,13 +451,13 @@ class Ui_MainWindow(object):
 "#lily_time_in_room_slider::handle:horizontal:pressed {\n"
 "    background:rgb(185,158,194);\n"
 "}\n"
-"#lily_time_in_room_slider::sub-page:horizontal {\n"
-"    background:rgb(205,178,214);\n"
-"}\n"
+"\n"
 "#lily_time_in_room_slider::groove:horizontal:hover {\n"
 "    background:rgba(205,178,214,45);\n"
 "}\n"
-"\n"
+"#lily_time_in_room_slider::groove:horizontal {\n"
+"    background:rgba(205,178,214,45);\n"
+"}\n"
 "#lily_mood_slider::handle:horizontal {\n"
 "    background:rgb(160,130,160);\n"
 "}\n"
@@ -464,13 +467,12 @@ class Ui_MainWindow(object):
 "#lily_mood_slider::handle:horizontal:pressed {\n"
 "    background:rgb(140,110,140);\n"
 "}\n"
-"#lily_mood_slider::sub-page:horizontal {\n"
-"    background:rgb(160,130,160);\n"
-"}\n"
 "#lily_mood_slider::groove:horizontal:hover {\n"
 "    background:rgba(160,130,160,45);\n"
 "}\n"
-"\n"
+"#lily_mood_slider::groove:horizontal {\n"
+"    background:rgba(160,130,160,45);\n"
+"}\n"
 "#lily_mood_activity_slider::handle:horizontal {\n"
 "    background:rgb(130,100,130);\n"
 "}\n"
@@ -480,13 +482,13 @@ class Ui_MainWindow(object):
 "#lily_mood_activity_slider::handle:horizontal:pressed {\n"
 "    background:rgb(110,80,110);\n"
 "}\n"
-"#lily_mood_activity_slider::sub-page:horizontal {\n"
-"    background:rgb(130,100,130);\n"
-"}\n"
+"\n"
 "#lily_mood_activity_slider::groove:horizontal:hover {\n"
 "    background:rgba(130,100,130,45);\n"
 "}\n"
-"\n"
+"#lily_mood_activity_slider::groove:horizontal {\n"
+"    background:rgba(130,100,130,45);\n"
+"}\n"
 "#lily_energy_slider::handle:horizontal {\n"
 "    background:rgb(100,70,100);\n"
 "}\n"
@@ -499,11 +501,10 @@ class Ui_MainWindow(object):
 "    background:rgb(80,50,80);\n"
 "}\n"
 "\n"
-"#lily_energy_slider::sub-page:horizontal {\n"
-"    background:rgb(100,70,100);\n"
-"}\n"
-"\n"
 "#lily_energy_slider::groove:horizontal:hover {\n"
+"    background:rgba(100,70,100,45);\n"
+"}\n"
+"#lily_energy_slider::groove:horizontal {\n"
 "    background:rgba(100,70,100,45);\n"
 "}\n"
 "\n"
@@ -645,16 +646,15 @@ class Ui_MainWindow(object):
         self.lilyInputPage = QtWidgets.QWidget()
         self.lilyInputPage.setObjectName("lilyInputPage")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.lilyInputPage)
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_2.setHorizontalSpacing(0)
-        self.gridLayout_2.setVerticalSpacing(4)
+        self.gridLayout_2.setContentsMargins(8, 8, 8, 8)
+        self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.lily_diet_mood_input_container = QtWidgets.QFrame(parent=self.lilyInputPage)
         self.lily_diet_mood_input_container.setObjectName("lily_diet_mood_input_container")
         self.gridLayout_15 = QtWidgets.QGridLayout(self.lily_diet_mood_input_container)
         self.gridLayout_15.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_15.setHorizontalSpacing(6)
-        self.gridLayout_15.setVerticalSpacing(4)
+        self.gridLayout_15.setVerticalSpacing(3)
         self.gridLayout_15.setObjectName("gridLayout_15")
         self.na_43 = QtWidgets.QLabel(parent=self.lily_diet_mood_input_container)
         self.na_43.setMaximumSize(QtCore.QSize(100, 16777215))
@@ -843,10 +843,10 @@ class Ui_MainWindow(object):
         self.lily_walk_note_commit_btn.setStyleSheet("QPushButton {\n"
 "border:none;\n"
 "image: url(:/newPrefix/lily_walk_norm.png);\n"
-"max-width:12px;\n"
-"min-width:12px;\n"
-"max-height:12px;\n"
-"min-height:12px;\n"
+"max-width:15px;\n"
+"min-width:15px;\n"
+"max-height:15px;\n"
+"min-height:15px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -923,10 +923,10 @@ class Ui_MainWindow(object):
 "QPushButton {\n"
 "border:none;\n"
 "image: url(:/newPrefix/lily_walk_norm.png);\n"
-"max-width:25px;\n"
-"min-width:25px;\n"
-"max-height:25px;\n"
-"min-height:25px;\n"
+"max-width:30px;\n"
+"min-width:30px;\n"
+"max-height:30px;\n"
+"min-height:30px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -980,7 +980,7 @@ class Ui_MainWindow(object):
         self.walk_mood_rate_frame.setObjectName("walk_mood_rate_frame")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.walk_mood_rate_frame)
         self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_10.setVerticalSpacing(0)
+        self.gridLayout_10.setVerticalSpacing(3)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.lily_behavior = QtWidgets.QSpinBox(parent=self.walk_mood_rate_frame)
         self.lily_behavior.setFrame(False)
@@ -1034,9 +1034,6 @@ class Ui_MainWindow(object):
 "QSlider::handle:horizontal:pressed {\n"
 "    background:rgb(185,158,194);\n"
 "}\n"
-"QSlider::sub-page:horizontal {\n"
-"    background:rgb(205,178,214);\n"
-"}\n"
 "QSlider::groove:horizontal:hover {\n"
 "    background:rgba(205,178,214,45);\n"
 "}")
@@ -1055,7 +1052,6 @@ class Ui_MainWindow(object):
 "QSlider::handle:horizontal {background:rgb(144,114,144);}\n"
 "QSlider::handle:horizontal:hover {background:rgb(174,144,174);}\n"
 "QSlider::handle:horizontal:pressed {background:rgb(124,94,124);}\n"
-"QSlider::sub-page:horizontal {background:rgb(144,114,144);}\n"
 "QSlider::groove:horizontal:hover {background:rgba(144,114,144,0.25);}\n"
 "")
         self.lily_gait_slider.setMinimum(0)
@@ -1069,10 +1065,10 @@ class Ui_MainWindow(object):
         self.lily_note_commit_btn.setStyleSheet("QPushButton {\n"
 "border:none;\n"
 "image: url(:/newPrefix/lily_walk_norm.png);\n"
-"max-width:14px;\n"
-"min-width:14px;\n"
-"max-height:14px;\n"
-"min-height:14px;\n"
+"max-width:15px;\n"
+"min-width:15px;\n"
+"max-height:15px;\n"
+"min-height:15px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -1325,7 +1321,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.lilyStack, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 237, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 268, 18))
         self.menubar.setObjectName("menubar")
         self.menuLily_Loves = QtWidgets.QMenu(parent=self.menubar)
         self.menuLily_Loves.setObjectName("menuLily_Loves")
